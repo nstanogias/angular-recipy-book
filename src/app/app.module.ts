@@ -12,6 +12,8 @@ import { FormsModule } from '@angular/forms';
 import { RecipesComponent } from './recipes/recipes.component';
 import { BsDropdownModule, CollapseModule } from 'ngx-bootstrap';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {ShoppingListService} from './shopping-list/shopping-list.service';
+import {RecipeService} from './recipes/recipe.service';
 
 
 @NgModule({
@@ -32,7 +34,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     CollapseModule.forRoot(),
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [ShoppingListService, RecipeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
